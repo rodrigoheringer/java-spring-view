@@ -30,7 +30,7 @@ public class Person {
     ) {
         System.out.println(viewName);
         List<com.example.demospringjpa.entity.Person> people = personRepository.get();
-        PersonCustomView personRepository2 = applicationContext.getBean(viewName, PersonCustomView.class);
-        return personRepository2.getView(people);
+        PersonCustomView customView = applicationContext.getBean(viewName, PersonCustomView.class);
+        return customView.getView(people);
     }
 }
