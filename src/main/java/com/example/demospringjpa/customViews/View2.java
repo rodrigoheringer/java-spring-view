@@ -19,7 +19,7 @@ public class View2 implements PersonCustomView {
         for (Person person : people) {
             stringObjectHashMap.put(person.getId() + "", person.getName());
         }
-        stringObjectHashMap.put("id", requestContext.RequestContext("id"));
+        stringObjectHashMap.put("id", requestContext.getContextVariable("id"));
         return stringObjectHashMap;
     }
 }

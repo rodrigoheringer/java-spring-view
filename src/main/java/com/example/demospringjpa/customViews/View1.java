@@ -19,7 +19,7 @@ public class View1 implements PersonCustomView {
         for (Person person : people) {
             nameList.add(person.getName());
         }
-        nameList.add(context.RequestContext("id"));
+        nameList.add(context.getContextVariable("id"));
         return nameList;
     }
 }

@@ -14,7 +14,7 @@ public class RequestContext {
         this.threadValues = new ThreadLocal<>();
     }
 
-    public <T> T RequestContext(String name) {
+    public <T> T getContextVariable(String name) {
         checkContext();
         return ((T) threadValues.get().get(name));
     }
