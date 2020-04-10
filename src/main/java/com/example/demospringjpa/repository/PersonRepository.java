@@ -17,7 +17,7 @@ public class PersonRepository {
 
     public List<Person> get() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

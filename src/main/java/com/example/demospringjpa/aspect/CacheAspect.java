@@ -14,7 +14,6 @@ public class CacheAspect {
     @Autowired
     Cache cache;
 
-
     @Around(value = "execution(* com.example.demospringjpa.repository.PersonRepository.*(..))")
     public Object RepoLogger(ProceedingJoinPoint jp) throws Throwable {
         String methodName = jp.getSignature().toString();
