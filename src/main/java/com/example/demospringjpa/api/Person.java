@@ -1,6 +1,6 @@
 package com.example.demospringjpa.api;
 
-import com.example.demospringjpa.customViews.PersonCustomView;
+import com.example.demospringjpa.aggregators.PersonAggregator;
 import com.example.demospringjpa.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -30,7 +30,7 @@ public class Person {
     ) {
         System.out.println(viewName);
         List<com.example.demospringjpa.entity.Person> people = personRepository.get();
-        PersonCustomView customView = applicationContext.getBean(viewName, PersonCustomView.class);
+        PersonAggregator customView = applicationContext.getBean(viewName, PersonAggregator.class);
         return customView.getView(people);
     }
 }

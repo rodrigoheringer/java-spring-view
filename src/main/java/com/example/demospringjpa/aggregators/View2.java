@@ -1,4 +1,4 @@
-package com.example.demospringjpa.customViews;
+package com.example.demospringjpa.aggregators;
 
 import com.example.demospringjpa.entity.Person;
 import com.example.demospringjpa.service.RequestContext;
@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Component
-public class View2 implements PersonCustomView {
+public class View2 implements PersonAggregator {
 
     @Autowired
     private RequestContext requestContext;
